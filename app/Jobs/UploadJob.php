@@ -46,19 +46,19 @@ class UploadJob implements ShouldQueue
         }
         $link = 'https://account.careclick.healthcare/api/register';
 
-        // $response = Http::post($link, [
+        Http::post($link, [
 
-				// 	'username'=>strtolower($this->user_data['username']),
-				// 	'email'=> $this->user_data['email'] ? $this->user_data['email'] : 'hygeia@careclick.healthcare',
-				// 	'firstname'=>$this->user_data['firstname'],
-				// 	'lastname'=>$this->user_data['lastname'],
-				// 	'gender'=>$this->user_data['gender'],
-				// 	'dob'=>$this->user_data['dateOfBirth'],
-				// 	'phonenumber'=>substr($this->user_data['phonenumber'], 0, 1) == '0' ? $this->user_data['phonenumber'] : 'NULL',
-				// 	'account'=>'hygeiahmo',
-				// 	'user_identifier'=>$user_d['hmo_id'] ?? 'hygeiahmo-63'
+					'username'=>strtolower($this->user_data['username']),
+					'email'=> $this->user_data['email'] ? $this->user_data['email'] : 'hygeia@careclick.healthcare',
+					'firstname'=>$this->user_data['firstname'],
+					'lastname'=>$this->user_data['lastname'],
+					'gender'=>$this->user_data['gender'],
+					'dob'=>$this->user_data['dateOfBirth'],
+					'phonenumber'=>substr($this->user_data['phonenumber'], 0, 1) == '0' ? $this->user_data['phonenumber'] : 'NULL',
+					'account'=>'hygeiahmo',
+					'user_identifier'=>$user_d['hmo_id'] ?? 'hygeiahmo-63'
 
-        // ]);
+        ]);
 
     }
 }
